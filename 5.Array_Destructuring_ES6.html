@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Destructuring in ES6</title>
+</head>
+<body>
+    <script>
+
+        const pglang = ['js','react','html','C#'];
+
+        // In ES5 
+
+        // var top1 = pglang[0];
+        // var top2 = pglang[1];
+        // var top3 = pglang[2];
+        // var top4 = pglang[3];
+        
+       // console.log(`Values From Array is : ${top1}`);
+
+        // In ES6
+
+        // let [top1,top2,top3,top4] = pglang;
+        // console.log("Values From Array: " + top1);
+
+        console.log(`The Total Length Of Array is : ${pglang.length}`);
+
+        let [top1,,,last] = pglang;
+
+        console.log(`My Favourite Programming language is  : ${top1}  
+        and my 2nd favourite is ${last}
+
+        `);
+
+
+    </script>
+</body>
+</html>
