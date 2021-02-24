@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classes, Object & Inheritance in JavaScript OOP</title>
+  </head>
+  <body>
+    <!--
+
+        Classes are a template for creating objects. 
+        They encapsulate data with code to work on that data.
+        Classes in JS are built on prototypes but also
+        have some syntax and semantics that are not shared 
+        with ES5 class-like semantics.
+
+    -->
+
+    <script>
+
+        class student 
+        {
+            constructor (name , age ,classs)
+            {
+                this.namee = name;
+                this.agee = age;
+                this.clas = classs;
+
+            }
+
+            // instance Method
+
+            biodata()
+            {
+                return `Hello I Am ${this.namee} and i am ${this.agee} Years Old . My highest Qaualification Is  ${this.clas}`;
+
+            }
+        };
+
+        class player extends student {
+
+            constructor(name,age,classs,game)
+            {
+                super(name,age,classs);
+                this.gamee = game;
+            }
+
+
+            // play_biodata()
+            // {
+            //     console.log(`Hello I Am ${this.namee} and i am ${this.agee} Years Old . My highest Qaualification Is  ${this.clas}. I Like To Play ${this.game}`);
+
+            // }
+
+            // instance Method
+            player_biodata()
+            {
+                console.log(`${super.biodata()}. And I Like To Play ${this.gamee}`);
+            }
+
+
+        };
+
+        // let obj1 = new student('Talha Zubair' , 24 ,'BSCS');
+        // let obj2 = new student('Usama Zubair' , 22,'B.Com');
+        // let obj3 = new student('Sikandar Zubair' , 15,'9th');
+
+        // obj1.biodata();
+        // obj2.biodata();
+        // obj3.biodata();
+
+        let obj1 = new player('Talha Zubair' , 24 ,'BSCS', 'Cricket');
+        let obj2 = new player('Usama Zubair' , 22,'B.Com' , 'Badmintan');
+        let obj3 = new player('Sikandar Zubair' , 15,'9th' , 'Cricket');
+
+        obj1.player_biodata();
+        obj2.player_biodata();
+        obj3.player_biodata();
+        
+
+
+    </script>
+  </body>
+</html>

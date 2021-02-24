@@ -11,20 +11,51 @@
 </head>
 <body>
     
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-2">
+    <header>
+        <h1> Guess The Word Game </h1>
+    </header>
 
-            </div>
-            <div class="col-md-8">
-                
-            </div>
-            <div class="col-md-2">
-                
-            </div>
+    <section>
+
+        <div class="gamearea">
+            <h3 class="msg"></h3>
+            <input type="text" class="hidden">
+            <br>
+            <h3> Abhi Baad Me Complate krni h</h3>
+
+            <button class="btn"> Click Here to  Start</button>
         </div>
-    </div>
 
 
+    </section>
+
+    <script>
+
+        const msg = document.querySelector('.msg');
+        const guess = document.querySelector('input');
+        const btn = document.querySelector('.btn');
+        let play = false;
+        let swords = ['python' , 'javascript' , 'html','CSS' , 'bootstrap' , 'angular' , 'java', 'css'];
+
+        const createNew = () => 
+        {
+            let randNum = (Math.random() * swords.length);
+            console.log(randNum);
+
+
+            console.log(swords[1]);
+
+        }
+        btn.addEventListener('click' , function() {
+            if (!play) {
+                
+                play = true;
+                btn.innerHTML= "Guess";
+                guess.classList.toggle('hidden');
+                createNew();
+            }
+        })
+
+    </script>
 </body>
 </html>
