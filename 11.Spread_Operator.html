@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
+    <title>Spread Operator</title>
+</head>
+<body>
+    <script>
+
+        // ES5
+        // function sum(a,b,c) {
+            
+        //      console.log(`The Addition of There Numbers is : ${a+b+c}`);
+        // }
+
+        // //sum(10,15,20);
+
+        // var arrval = [1,2,3];
+        // sum.apply(null, arrval);
+
+    //     function sum(a,b,c) {
+            
+    //         console.log(`The Addition of There Numbers is : ${a+b+c}`);
+    //    }
+
+    //    var arrval = [1,2,3];
+       
+    //    // Now we will use Spread Operator => ... <=
+    //    console.log(`The Values Of Array is : ${arrval}`);
+    //    sum(...arrval);
+
+    // Replaced  Concat 
+
+    // let array1 = [10,20,30,40];
+    // let array2 = [50,60,70,80];
+
+    //ES5 
+
+    // array1 = array1.concat(array2);
+    // console.log(`Value After Concatination is : ${array1}`);
+
+    // ES6
+
+    // array1 = [...array1, ...array2];
+    // // console.log(`Value After Concatination is : ${array1}`);
+
+    // console.log(array1);
+
+    // Replaced  Copy
+    
+    // let arrayyy = [1,2,3,4,5];
+
+    // let arrayyy2 = arrayyy;
+
+    // arrayyy2.push(6,7);
+
+    // console.log(arrayyy2);
+    // console.log(arrayyy);
+
+    let arrayyy = [1,2,3,4,5];
+
+    let array2 = [...arrayyy , 6,7];
+
+    let array3 = [8,9,10,11,12,13,14,15];
+
+    let arrayC = [...arrayyy , 6,7 , ...array3];
+    console.log(`This IS Array2 ${array2}`);
+    console.log(`This IS Array1  ${arrayyy}`);
+    console.log(`This IS Array3   ${arrayC}`);
+
+
+
+
+
+    </script>
+</body>
+</html>

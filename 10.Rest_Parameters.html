@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Parameters</title>
+</head>
+<body>
+    
+    <script>
+        // ES5
+        // var add = function (a,b){
+         //     console.log(`Addition Of Two numbers is ${a+b}`);
+        // }
+         // add(1,2,3,4,5,6,7,8,9);
+
+         // ES6
+
+         // => ... <= is called is called rest parameter
+        //   var add = function (...inputs){
+        //     console.log(...inputs);
+        //     let total = 0;
+
+        //     for( let i of inputs)
+        //     {
+                
+        //         total +=i;
+        //     }
+        //      console.log(`ToTaL Is ${total}`);
+        // }
+        //  add(1,2,3,4,5,6,7,8,9 , 10);
+
+        // For Funn :p
+
+        function fun(a,b,...c) {
+            console.log(`The Value Of A is : ${a}. The Value Of B is : ${b}`);
+            console.log(`The Value Of C: ${c}`);
+            console.log(`The value On First Indec Of C is ${c[0]}`);
+            console.log(`The Total Length of C is: ${c.length}`);
+            console.log(`The index of Shakeel Is : ${c.indexOf('shakeel')}`);
+            
+        }
+        fun('Talha' , 'Kashi' , 'Ali' , 'Ali' , 'shakeel');
+
+    </script>
+</body>
+</html>

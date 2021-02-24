@@ -12,8 +12,40 @@
         const dataa = {
             name : "Talha",
             age: 26,
-            deg: "BSCS"
+            deg: "BSCS",
+            hobby : {
+                play :'Games',
+                program :'Programing',
+
+            }
         };
+
+        //ES5
+
+        //console.log(`My Name is ${dataa.name}. My Age is ${dataa.age} . My Highest Qualification is ${dataa.deg}`);
+       // let {name , age , deg} = dataa;
+        // ES6 Object Destructuring
+       // console.log(`My Name is ${name}. My Age is ${age} . My Highest Qualification is ${deg}`);
+
+        // Second Method Declare object prop first
+
+    //     let name , age , deg ;
+
+    //    {( {name,age,deg} = dataa)}
+
+    // console.log(`My Name is ${name}. My Age is ${age} . My Highest Qualification is ${deg}`);
+
+    // renaming property  we use :second name of property
+
+    // let {name : myname , age :ages , deg : degree} = dataa;
+    // console.log(`My Name is ${myname}. My Age is ${age} . My Highest Qualification is ${degree}`);
+
+    let {name , age , deg , hobby} = dataa;
+     
+    console.log(`My Name is ${name}. My Age is ${age} . My Highest Qualification is ${deg}. i love playing ${hobby.play} also like ${hobby.program}`);
+
+
+
 
     </script>
 </body>
